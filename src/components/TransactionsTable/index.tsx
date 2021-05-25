@@ -1,9 +1,8 @@
-import { useContext } from "react";
-import { TransactionsContext } from "../../contexts/TransactionsContext";
+import { useTransactions } from "../../hooks/useTransactions";
 import { Container } from "./styles";
 
 export function TransactionsTable() {
-  const {transactions} = useContext(TransactionsContext)
+  const { transactions } = useTransactions()
   
   return (
     <Container>
@@ -18,8 +17,7 @@ export function TransactionsTable() {
         </thead>
 
         <tbody>
-          {/* { transactions ? (
-          transactions.map((transaction) => (
+          {transactions.map((transaction) => (
             <tr key={transaction.id}>
               <td>{transaction.title}</td>
 
@@ -33,10 +31,7 @@ export function TransactionsTable() {
               <td>{transaction.category}</td>
               <td>{new Intl.DateTimeFormat('pt-BR').format(new Date(transaction.createdAt))}</td>
             </tr>
-          ))
-          ) : console.log('não há transações')
-          } */}
-          
+          ))}
         </tbody>
       </table>
     </Container>

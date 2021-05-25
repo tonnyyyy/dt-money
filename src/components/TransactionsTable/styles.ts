@@ -15,29 +15,33 @@ export const Container = styled.div`
       line-height: 1.5rem;
     }
 
-    td{
-      padding: 1rem 2rem;
-      border: 0;
-      background: var(--shape);
-      color: var(--text-body);
-      border-radius: 0.25rem;
+    tbody {
+      tr {
+        td{
+          padding: 1rem 2rem;
+          border: 0;
+          background: var(--shape);
+          color: var(--text-body);
+          border-radius: 0.25rem;
 
-      &::first-child{
-        color: var(--text-title)
-      }
+          &::first-child{
+            color: var(--text-title)
+          }
 
-      &.deposit{
-        color: var(--green);
+          &.deposit{
+            color: var(--green);
 
-        &::before{
-          content:"+ ";
-        }
-      }
-      &.withdraw{
-        color: var(--red);
+            &::before{
+              content:"+ ";
+            }
+          }
+          &.withdraw{
+            color: var(--red);
 
-        &::before{
-          content:"- ";
+            &::before{
+              content:"- ";
+            }
+          }
         }
       }
     }

@@ -12,6 +12,13 @@ export const Container = styled.div`
     border-radius: 0.25rem;
     color: var(--text-title);
 
+    border-left: 0px solid var(--blue-light);
+    transition: border-left 0.15s;
+
+    &:hover {
+      border-left: 10px solid var(--blue-light);
+    }
+
     header{
       display: flex;
       gap: 1rem;
